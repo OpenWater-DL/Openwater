@@ -7,6 +7,7 @@ form {
 	margin: 0 auto;
 }
 
+
 button {
   color: #777;
 	background: rgb(255, 255, 255);
@@ -38,9 +39,27 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+
+.row {
+
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+
+
 .portfolio-content {
 	line-height: 2;
 	color: #555;
+	margin: 0 auto;
+	display:block;
+}
+
+.portfolio-content img{
+
+width: 100%;
+
 }
 
 .portfolio-content a {
@@ -88,10 +107,14 @@ h1, h2, h3 {
 
 .portfolio-img {
 	width: 100%;
-	max-height: 250px;
+	/* max-height: 250px; */
+	height: 250px;
 	display: block;
 	object-fit: cover;
 }
+
+   
+
 
 .project-img {
 	width: 100%;
@@ -102,8 +125,9 @@ h1, h2, h3 {
 /* Image Hover Effect */
 
 .hovereffect {
-	width: 100%;
+	width: 90%;
   height: 100%;
+  /* max-height: 400px; */
   float: left;
   overflow: hidden;
   position: relative;
