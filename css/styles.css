@@ -80,7 +80,10 @@ input:focus, textarea:focus {
 }
 
 .portfolio-content img {
+	
 	max-width: 100%;
+	display: block;
+	margin: 0 auto;
 	
 }
 
@@ -171,7 +174,8 @@ h1, h2, h3 {
 
 .hovereffect .overlay-text {
 	font-size: 1.3rem;
-	font-family: 'Crimson Text', sans-serif;
+	/* font-family: 'Crimson Text', sans-serif; */
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	color: #000;
 	left: 50%;
@@ -205,8 +209,8 @@ h1, h2, h3 {
 }
 
 .hovereffect:hover img {
-	opacity: 0;
-	filter: alpha(opacity=0);
+	opacity: 0.1;
+	filter: alpha(opacity=10);
 }
 
 .page-nav {
