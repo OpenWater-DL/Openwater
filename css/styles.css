@@ -100,7 +100,7 @@ input:focus, textarea:focus {
 }
 
 .page-icon{
-	display:inline-block;
+	display:inline-block !important;
 	width:20px !important;
 }
 
