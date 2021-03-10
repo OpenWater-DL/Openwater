@@ -3,6 +3,7 @@ var canvas;
 var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
+    Body = Matter.Body,
     Bodies = Matter.Bodies,
     Mouse = Matter.Mouse,
     MouseConstraint = Matter.MouseConstraint;
@@ -42,7 +43,6 @@ function setup() {
         allImg[i].style("display", "none");
     }
 
-
     //加载matter.js
     engine = Engine.create();
     world = engine.world;
@@ -60,10 +60,12 @@ function setup() {
 
     rectMode(CENTER);
     var h = 50;
-    var ground1 = new Boundary(width / 2, height, width, h, 0);
-    var ground2 = new Boundary(width / 2, 0, width, h, 0);
-    var ground3 = new Boundary(0, height/2, h,height, 0);
-    var ground4 = new Boundary(width, height/2, h,height, 0);
+    var heightMax = height * 10 ;
+    var widthMax = width * 10 ;
+    var ground1 = new Boundary(width / 2, height, widthMax, h, "BOTTOM");
+    var ground2 = new Boundary(width / 2, 0, widthMax, h, "TOP");
+    var ground3 = new Boundary(0, height/2, h,heightMax, "LEFT");
+    var ground4 = new Boundary(width, height/2, h,heightMax, "RIGHT");
     boundaries.push(ground1);
     boundaries.push(ground2);
     boundaries.push(ground3);
@@ -73,10 +75,23 @@ function setup() {
 
     //创建带有图像的box
     for (let i = 0; i < imgP.length; i++) {
-        boxes.push(new Box(random(50,width-50), random(0,height/2), random(100,200), random(100,200), imgP[i]));
+      var imgScale = imgScaleNum(imgP[i].width);
+      boxes.push(new Box(random(50,width-50), random(0,height/2), imgP[i].width*imgScale, imgP[i].height*imgScale, imgP[i]));
     }
+    console.log(boundaries[0].body);
 
+}
 
+function imgScaleNum(w){
+this.w = w;
+var scaleTarget;
+if(windowWidth<900){
+    scaleTarget = (width / 4 ) / this.w;
+
+}else{
+scaleTarget = (width / 10 ) / this.w ; 
+}
+return scaleTarget;
 }
 
 function draw() {
@@ -84,22 +99,17 @@ function draw() {
     fill(200, 40)
     stroke(255);
 
+    
+
     for (let i = 0; i < boxes.length; i++) {
-        boxes[i].show();
+           boxes[i].show();
     }
 
     for (let i = 0; i < boundaries.length; i++) {
+        boundaries[i].update();
         boundaries[i].show();
     }
 
-    if (mConstraint.body) {
-        var pos = mConstraint.body.position;
-        var offset = mConstraint.constraint.pointB;
-        var m = mConstraint.mouse.position;
-        stroke(0, 255, 0);
-        line(pos.x + offset.x, pos.y + offset.y, m.x, m.y);
-
-    }
 
 
 }
@@ -107,28 +117,7 @@ function draw() {
 
 function windowResized() {
     canvas = createCanvas(windowWidth, windowHeight);
+   
     // randomPosition();
 
 }
-
-/*
-function randomPosition() {
-    //如何抓住HTML里的元素，并控制他们的显示？显示什么？
-    for (let i = 0; i < test.length; i++) {
-        test[i].style("width", "100px");
-        test[i].style("transform", "rotate(" + random(-30, 30) + "deg)");
-    }
-
-
-}
-
-function rotateElement() {
-
-    this.style("transform", "rotate(" + random(-30, 30) + "deg)");
-
-}
-
-function testWork(){
-  console.log( 1);
-
-}*/
