@@ -21,17 +21,18 @@ function isPressed() {
         
         fill(0);
         textStyle(BOLD);
-        textAlign(LEFT, TOP);
+        textAlign(CENTER, TOP);
         
         var tittleSize = height*0.08;
-        var timeSize = tittleSize*0.8;
-        var tittlePos = createVector(50,height/4);
+        var timeSize = tittleSize*0.5;
+        var tittlePos = createVector(width/2,height/6);
         for(var i=0;i<boxes.length;i++){
             let temp = boxes[i];
             if(temp.isPressed){         
                 textSize(tittleSize);       
                 text(temp.postTittle, tittlePos.x, tittlePos.y);
                 textSize(timeSize);
+                fill(255,90);
                 text(temp.postTime,tittlePos.x, tittlePos.y+tittleSize*1.2);
             }
 
