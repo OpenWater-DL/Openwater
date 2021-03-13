@@ -34,6 +34,7 @@
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
 <script src="js/matter.js"></script>
 <script src="js/boxClass.js"></script>
+<script src="js/openAndInfo.js"></script>
 <script src="js/sketch.js"></script>
 
 
@@ -60,7 +61,7 @@
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="/">WaterPatch</a>
+  <a class="navbar-brand ml-2" id="siteTittle" href="/">WaterPatch</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -87,7 +88,7 @@
 
     </div>
 		
-  			<div class="container-fluid navbar-container m-sm-5">
+    <div class="container-fluid navbar-container m-sm-5">
 <div class="row" id="row">
 
     <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
@@ -96,11 +97,68 @@
     <div class="hovereffect rounded">
         <a href="/2017/04/01/2017天地时纪/">
 
-      <img class="img-fluid portfolio-img" src="/images/2017tdsj.png" alt="天地时纪">
+      <img class="img-fluid portfolio-img" src="/images/2017tdsj.png" alt="天地时纪" >
       
       <div class="overlay">
         <span class="overlay-text">天地时纪</span>
       </div>
+      <img class="page-time" src="#" alt="2017-04" style="display: none">
+     
+
+    </a>
+    </div>
+</div>
+
+    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
+
+<div class="row portfolio-a">
+    <div class="hovereffect rounded">
+        <a href="/2016/06/01/2016-海报/">
+
+      <img class="img-fluid portfolio-img" src="/images/2016hb.png" alt="海报" >
+      
+      <div class="overlay">
+        <span class="overlay-text">海报</span>
+      </div>
+      <img class="page-time" src="#" alt="2016-06" style="display: none">
+     
+
+    </a>
+    </div>
+</div>
+
+    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
+
+<div class="row portfolio-a">
+    <div class="hovereffect rounded">
+        <a href="/2016/03/01/2016-图形设计/">
+
+      <img class="img-fluid portfolio-img" src="/images/2016txsj.png" alt="图形练习" >
+      
+      <div class="overlay">
+        <span class="overlay-text">图形练习</span>
+      </div>
+      <img class="page-time" src="#" alt="2016-03" style="display: none">
+     
+
+    </a>
+    </div>
+</div>
+
+    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
+
+<div class="row portfolio-a">
+    <div class="hovereffect rounded">
+        <a href="/2015/10/01/2015基础构成/">
+
+      <img class="img-fluid portfolio-img" src="/images/2015jcgc.png" alt="基础构成" >
+      
+      <div class="overlay">
+        <span class="overlay-text">基础构成</span>
+      </div>
+      <img class="page-time" src="#" alt="2015-10" style="display: none">
+     
+
     </a>
     </div>
 </div>
@@ -111,56 +169,14 @@
     <div class="hovereffect rounded">
         <a href="/2015/10/01/2015姜的事情/">
 
-      <img class="img-fluid portfolio-img" src="/images/2015jdsq.png" alt="姜的事情">
+      <img class="img-fluid portfolio-img" src="/images/2015jdsq.png" alt="姜的事情" >
       
       <div class="overlay">
         <span class="overlay-text">姜的事情</span>
       </div>
-    </a>
-    </div>
-</div>
+      <img class="page-time" src="#" alt="2015-10" style="display: none">
+     
 
-    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
-
-<div class="row portfolio-a">
-    <div class="hovereffect rounded">
-        <a href="/1970/01/01/2016-图形设计/">
-
-      <img class="img-fluid portfolio-img" src="/images/2016txsj.png" alt="2016 图形练习">
-      
-      <div class="overlay">
-        <span class="overlay-text">2016 图形练习</span>
-      </div>
-    </a>
-    </div>
-</div>
-
-    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
-
-<div class="row portfolio-a">
-    <div class="hovereffect rounded">
-        <a href="/1970/01/01/2016-海报/">
-
-      <img class="img-fluid portfolio-img" src="/images/2016hb.png" alt="2016 海报">
-      
-      <div class="overlay">
-        <span class="overlay-text">2016 海报</span>
-      </div>
-    </a>
-    </div>
-</div>
-
-    <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
-
-<div class="row portfolio-a">
-    <div class="hovereffect rounded">
-        <a href="/1970/01/01/2015基础构成/">
-
-      <img class="img-fluid portfolio-img" src="/images/2015jcgc.png" alt="2015基础构成">
-      
-      <div class="overlay">
-        <span class="overlay-text">2015基础构成</span>
-      </div>
     </a>
     </div>
 </div>
@@ -168,18 +184,18 @@
 </div>
 </div>
 
-</div>
+<!-- 
+    <nav class="page-nav" >
+     <a class="extend prev" rel="prev" href="/archives/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+    </nav>
+     -->
+<!-- </div> -->
   
 
 
 
 
 
-
-           
-    <nav class="page-nav" >
-        <a class="extend prev" rel="prev" href="/archives/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
 
   	
 

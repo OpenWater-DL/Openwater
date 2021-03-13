@@ -34,6 +34,7 @@
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
 <script src="js/matter.js"></script>
 <script src="js/boxClass.js"></script>
+<script src="js/openAndInfo.js"></script>
 <script src="js/sketch.js"></script>
 
 
@@ -60,7 +61,7 @@
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="/">WaterPatch</a>
+  <a class="navbar-brand ml-2" id="siteTittle" href="/">WaterPatch</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -87,7 +88,7 @@
 
     </div>
 		
-  			<div class="container-fluid navbar-container m-sm-5">
+    <div class="container-fluid navbar-container m-sm-5">
 <div class="row" id="row">
 
     <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
@@ -96,11 +97,14 @@
     <div class="hovereffect rounded">
         <a href="/2017/07/01/2017Mars/">
 
-      <img class="img-fluid portfolio-img" src="/images/2017mars.png" alt="「M·A·R·S」VF新品发布会2017">
+      <img class="img-fluid portfolio-img" src="/images/2017mars.png" alt="M·A·R·S新品发布会" >
       
       <div class="overlay">
-        <span class="overlay-text">「M·A·R·S」VF新品发布会2017</span>
+        <span class="overlay-text">M·A·R·S新品发布会</span>
       </div>
+      <img class="page-time" src="#" alt="2017-07" style="display: none">
+     
+
     </a>
     </div>
 </div>
@@ -108,7 +112,8 @@
 </div>
 </div>
 
-</div>
+<!--  -->
+<!-- </div> -->
   
 
 
@@ -116,7 +121,6 @@
 
 
 
-           
   	
 
     <!-- After footer scripts -->

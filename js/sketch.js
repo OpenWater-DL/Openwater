@@ -16,13 +16,33 @@ var boxes = [];
 
 //获取封面图片
 var imagesPath = []; //全局变量src；类型：路径
+var postTittle = [];
+var postTimes = [];
 var imgP = []; //类型：图片
+
+var siteTittle;
+
+
+var dragPlaceY;
+
+
 
 $(function() {
     //遍历对象-获得图片的路径
     $(".portfolio-img").each(function() {
         imagesPath.push(this.src);
+        postTittle.push(this.alt);
+
+
     })
+
+
+    $(".page-time").each(function() {
+        postTimes.push(this.alt);
+
+    })
+
+
 });
 
 //通过上面的图片路径，加载到p5里
@@ -34,7 +54,7 @@ function preload() {
 }
 
 function setup() {
-
+    console.log(postTittle);
     canvas = createCanvas(windowWidth, windowHeight);
 
     //隐藏原生html展示的图片
@@ -42,6 +62,10 @@ function setup() {
     for (let i = 0; i < allImg.length; i++) {
         allImg[i].style("display", "none");
     }
+    // var tittle = select("#siteTittle").innerHTML;
+
+    siteTittle = document.getElementById("siteTittle").innerHTML;
+
 
     //加载matter.js
     engine = Engine.create();
@@ -50,6 +74,7 @@ function setup() {
     canvasMouse = Mouse.create(canvas.elt);
     canvasMouse.pixelRatio = pixelDensity();
     World.add(world, canvasMouse);
+    engine.world.gravity.y = -0.1;
 
 
     var options = {
@@ -60,12 +85,12 @@ function setup() {
 
     rectMode(CENTER);
     var h = 50;
-    var heightMax = height * 10 ;
-    var widthMax = width * 10 ;
+    var heightMax = height * 10;
+    var widthMax = width * 10;
     var ground1 = new Boundary(width / 2, height, widthMax, h, "BOTTOM");
-    var ground2 = new Boundary(width / 2, 0, widthMax, h, "TOP");
-    var ground3 = new Boundary(0, height/2, h,heightMax, "LEFT");
-    var ground4 = new Boundary(width, height/2, h,heightMax, "RIGHT");
+    var ground2 = new Boundary(width / 2, height / 3, widthMax, h, "TOP");
+    var ground3 = new Boundary(0, height / 2, h, heightMax, "LEFT");
+    var ground4 = new Boundary(width, height / 2, h, heightMax, "RIGHT");
     boundaries.push(ground1);
     boundaries.push(ground2);
     boundaries.push(ground3);
@@ -75,49 +100,53 @@ function setup() {
 
     //创建带有图像的box
     for (let i = 0; i < imgP.length; i++) {
-      var imgScale = imgScaleNum(imgP[i].width);
-      boxes.push(new Box(random(50,width-50), random(0,height/2), imgP[i].width*imgScale, imgP[i].height*imgScale, imgP[i]));
-    }
-    console.log(boundaries[0].body);
+        var imgScale = imgScaleNum(imgP[i].width);
+        boxes.push(new Box(random(50, width - 50), random(height, height / 2), imgP[i].width * imgScale, imgP[i].height * imgScale, imgP[i], postTittle[i],postTimes[i]));
+        }
 
-}
 
-function imgScaleNum(w){
-this.w = w;
-var scaleTarget;
-if(windowWidth<900){
-    scaleTarget = (width / 4 ) / this.w;
+        dragPlaceY = 0;
 
-}else{
-scaleTarget = (width / 10 ) / this.w ; 
-}
-return scaleTarget;
-}
-
-function draw() {
-    background(200);
-    fill(200, 40)
-    stroke(255);
-
-    
-
-    for (let i = 0; i < boxes.length; i++) {
-           boxes[i].show();
     }
 
-    for (let i = 0; i < boundaries.length; i++) {
-        boundaries[i].update();
-        boundaries[i].show();
+    function imgScaleNum(w) {
+        this.w = w;
+        var scaleTarget;
+        if (windowWidth < 900) {
+            scaleTarget = (width / 4) / this.w;
+
+        } else {
+            scaleTarget = (width / 6) / this.w;
+        }
+        return scaleTarget;
     }
 
 
+    function draw() {
+        background(200);
 
-}
+
+        isPressed();
 
 
-function windowResized() {
-    canvas = createCanvas(windowWidth, windowHeight);
-   
-    // randomPosition();
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].update();
+            boxes[i].show();
+        }
 
-}
+        for (let i = 0; i < boundaries.length; i++) {
+            boundaries[i].update();
+            boundaries[i].show();
+        }
+
+
+
+    }
+
+
+    function windowResized() {
+        canvas = createCanvas(windowWidth, windowHeight);
+
+        // randomPosition();
+
+    }

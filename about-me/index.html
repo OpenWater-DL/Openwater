@@ -34,6 +34,7 @@
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
 <script src="js/matter.js"></script>
 <script src="js/boxClass.js"></script>
+<script src="js/openAndInfo.js"></script>
 <script src="js/sketch.js"></script>
 
 
@@ -60,7 +61,7 @@
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="/">WaterPatch</a>
+  <a class="navbar-brand ml-2" id="siteTittle" href="/">WaterPatch</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -87,23 +88,25 @@
 
     </div>
 		
-  			
+    
+
+        
         <section class="row px-5">
             <div class="col-lg-12 col-12 mt-lg-4 mt-2 mx-3  mb-4  portfolio-content">
                 <p>你好，我是开水。</p>
-<p>高三时为理想半路从理科转学艺术，大学读的是设计。<br>在理科生里觉得自己很天马行空，去到美院发现自己相当理性。<br>也愁做设计时是否理性过头，也虚写代码时路子太野。<br>热衷探索折腾，喜欢清晰易读的信息。</p>
+<p>高三时为理想半路转学艺术，大学读的是设计。<br>在理科生里觉得自己很天马行空，去到美院发现自己相当理性。<br>也愁做设计时是否理性过头，也虚写代码时路子太野。<br>热衷探索折腾，喜欢清晰易读的信息。</p>
 <hr>
 <p><strong>领域方向</strong><br>本科：广州美术学院 视觉传达-信息设计专业，毕业设计<a href="/2019/05/21/2019%E5%AD%97%E8%BF%B9%E5%8B%98%E5%AF%9F%E8%AE%A1%E5%88%92/">《字迹勘察计划》</a>是以手写字迹实时驱动的演算图形生成实验。<br>硕士：武藏野美术大学 基础设计专业，研究题目与基于屏幕的手势交互相关，在读中。</p>
-<p>比起纯平面设计，兴趣更多在于动态及可交互的输出。<br>以兴趣为导向自学编程中，以Processing以及web前端为主。</p>
+<p>相比起传统的纯平面设计，兴趣更多在于动态及可交互的内容。<br>以兴趣为导向自学编程中，以Processing以及web前端为主。</p>
 <hr>
 <p><strong>联系方式</strong></p>
-<p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/source/images/wechat.png" class="page-icon">   Superwater_kon<br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/source/images/email.png" class="page-icon">   <a href="mailto:&#x44;&#x61;&#110;&#x6c;&#101;&#105;&#x5f;&#87;&#97;&#116;&#101;&#x72;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#x44;&#x61;&#110;&#x6c;&#101;&#105;&#x5f;&#87;&#97;&#116;&#101;&#x72;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a>  <a href="mailto:&#87;&#97;&#116;&#101;&#x72;&#x2e;&#68;&#x61;&#110;&#x6c;&#101;&#105;&#x32;&#x32;&#48;&#x40;&#x47;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#87;&#97;&#116;&#101;&#x72;&#x2e;&#68;&#x61;&#110;&#x6c;&#101;&#105;&#x32;&#x32;&#48;&#x40;&#x47;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+<p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/source/images/wechat.png" class="page-icon">   Superwater_kon<br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/source/images/email.png" class="page-icon">   <a href="mailto:&#68;&#97;&#x6e;&#x6c;&#101;&#105;&#x5f;&#87;&#x61;&#116;&#x65;&#x72;&#x40;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;">&#68;&#97;&#x6e;&#x6c;&#101;&#105;&#x5f;&#87;&#x61;&#116;&#x65;&#x72;&#x40;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;</a>  <a href="mailto:&#87;&#x61;&#x74;&#101;&#x72;&#x2e;&#x44;&#97;&#x6e;&#x6c;&#101;&#x69;&#50;&#x32;&#x30;&#64;&#71;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#87;&#x61;&#x74;&#101;&#x72;&#x2e;&#x44;&#97;&#x6e;&#x6c;&#101;&#x69;&#50;&#x32;&#x30;&#64;&#71;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 <hr>
 <p><strong>项目经历</strong><br>2020年<br>电影《检方的罪人》中国大陆版片名字体设计<br>一禾公益“气象安全”主题卡牌绘制</p>
 <p>2019年<br>毕业设计《字迹勘察计划》于广州美术学院毕业展展出<br>广东电视台春节联欢晚会LOGO设计及参与相关辅助视觉设计</p>
 <p>2018年<br>1212创意中国暖场视频及相关动态制作<br>广东省2019届高校毕业生供需见面活动艺术类专场《就业指南》《学生自荐作品集》《学生创业团队简介》编排设计<br>参与清远建市30周年成就展视频装置时光档案制作<br>广东电视台“行花街” 春节频道推广H5视觉设计</p>
 <p>2017年<br>广东电视台4K超清电视频道开播推广H5视觉设计<br>参与VF爱佳照明 品牌VI设计<br>参与VF爱佳照明 2017年「M・A・R・S」新品发布会视觉设计<br>定格动画《Round》参展2017年伦敦设计周</p>
-<p>2016年<br>广美视觉学院歌手大赛视觉设计<br>中国南方电网省级会议PPT视觉设计</p>
+<p>2016年<br>广美视觉学院歌手大赛视觉设计<br>中国南方电网省级会议PPT设计</p>
 <hr>
 <p><strong>获奖经历</strong></p>
 <p>2019年<br>广州美术学院2019年“优秀毕业设计”<br>广州美术学院2019年“优秀毕业生”</p>
@@ -113,7 +116,8 @@
             </div>
         </section>
 
-           
+        
+        
   	
 
     <!-- After footer scripts -->

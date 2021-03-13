@@ -1,9 +1,10 @@
-function Box(x, y, w, h, img) {
+function Box(x, y, w, h, img,postTittle,postTime) {
 
     var options = {
         friction: 0.4,
         restitution: 0.6,
-        frictionAir: 0.08
+        frictionAir: random(0.02, 0.1),
+        angle: random(-PI / 2, PI / 2)
 
     }
     this.body = Bodies.rectangle(x, y, w, h, options);
@@ -11,6 +12,24 @@ function Box(x, y, w, h, img) {
     this.w = w;
     this.h = h;
     this.imgP = img;
+    this.isPressed = false;
+    this.postTittle = postTittle;
+    this.postTime = postTime;
+    
+
+
+    this.update = function() {
+
+
+        if (this.body == mConstraint.body) {
+            this.isPressed = true;
+        } else {
+            this.isPressed = false;
+
+        }
+
+    }
+
     this.show = function() {
         var pos = this.body.position;
         var angle = this.body.angle;
@@ -21,7 +40,15 @@ function Box(x, y, w, h, img) {
         // rect(0, 0, this.w, this.h);
         imageMode(CENTER);
         image(this.imgP, 0, 0, this.w, this.h);
+        if (this.isPressed) {
+            stroke(255, 200, 0);
+            strokeWeight(5);
+            noFill();
+            rect(0, 0, this.w, this.h);
+        }
         pop();
+
+
 
     }
 
@@ -48,7 +75,7 @@ function Boundary(x, y, w, h, pType) {
             yTarget = windowHeight;
         } else if (this.pType == "TOP") {
             xTarget = windowWidth / 2;
-            yTarget = 0;
+            yTarget = windowHeight / 5;
         } else if (this.pType == "LEFT") {
             xTarget = 0;
             yTarget = windowHeight / 2;
@@ -58,8 +85,8 @@ function Boundary(x, y, w, h, pType) {
         }
 
         Body.setVelocity(this.body, { x: xTarget - this.body.position.x, y: yTarget - this.body.position.y });
-        Body.setPosition(this.body, { x: xTarget, y: yTarget });   
-        
+        Body.setPosition(this.body, { x: xTarget, y: yTarget });
+
 
     }
 
@@ -67,11 +94,17 @@ function Boundary(x, y, w, h, pType) {
     this.show = function() {
         var pos = this.body.position;
         var angle = this.body.angle;
+      
+
         push();
+        rectMode(CENTER);
         translate(pos.x, pos.y);
         // rotate(angle);
         noStroke();
-        fill(0);
+
+        if (this.pType == "TOP") {
+            noFill();
+        } else { fill(0); }
         rect(0, 0, this.w, this.h);
 
         pop();

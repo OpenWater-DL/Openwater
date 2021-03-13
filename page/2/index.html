@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>WaterPatch</title>
+  <title>page - WaterPatch</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -34,6 +34,7 @@
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
 <script src="js/matter.js"></script>
 <script src="js/boxClass.js"></script>
+<script src="js/openAndInfo.js"></script>
 <script src="js/sketch.js"></script>
 
 
@@ -60,7 +61,7 @@
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="/">WaterPatch</a>
+  <a class="navbar-brand ml-2" id="siteTittle" href="/">WaterPatch</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -87,20 +88,23 @@
 
     </div>
 		
-  			<div class="container-fluid navbar-container m-sm-5">
+    <div class="container-fluid navbar-container m-sm-5">
 <div class="row" id="row">
 
     <!-- <div class="col-lg-4 col-md-6 col-12 mb-4 row portfolio-a"> -->
 
 <div class="row portfolio-a">
     <div class="hovereffect rounded">
-        <a href="/1970/01/01/2016-图形设计/">
+        <a href="/2018/12/01/2018创意中国/">
 
-      <img class="img-fluid portfolio-img" src="/images/2016txsj.png" alt="2016 图形练习">
+      <img class="img-fluid portfolio-img" src="/images/2018cyzg.png" alt="1212创意中国" >
       
       <div class="overlay">
-        <span class="overlay-text">2016 图形练习</span>
+        <span class="overlay-text">1212创意中国</span>
       </div>
+      <img class="page-time" src="#" alt="2018-12" style="display: none">
+     
+
     </a>
     </div>
 </div>
@@ -109,13 +113,16 @@
 
 <div class="row portfolio-a">
     <div class="hovereffect rounded">
-        <a href="/1970/01/01/2016-海报/">
+        <a href="/2019/05/21/2019字迹勘察计划/">
 
-      <img class="img-fluid portfolio-img" src="/images/2016hb.png" alt="2016 海报">
+      <img class="img-fluid portfolio-img" src="/images/ziji.png" alt="字迹勘察计划-毕业设计" >
       
       <div class="overlay">
-        <span class="overlay-text">2016 海报</span>
+        <span class="overlay-text">字迹勘察计划-毕业设计</span>
       </div>
+      <img class="page-time" src="#" alt="2019-05" style="display: none">
+     
+
     </a>
     </div>
 </div>
@@ -124,13 +131,16 @@
 
 <div class="row portfolio-a">
     <div class="hovereffect rounded">
-        <a href="/1970/01/01/2015基础构成/">
+        <a href="/2020/03/01/2020造房记/">
 
-      <img class="img-fluid portfolio-img" src="/images/2015jcgc.png" alt="2015基础构成">
+      <img class="img-fluid portfolio-img" src="/images/zaofangji.png" alt="造房记" >
       
       <div class="overlay">
-        <span class="overlay-text">2015基础构成</span>
+        <span class="overlay-text">造房记</span>
       </div>
+      <img class="page-time" src="#" alt="2020-03" style="display: none">
+     
+
     </a>
     </div>
 </div>
@@ -138,7 +148,12 @@
 </div>
 </div>
 
-</div>
+<!-- 
+    <nav class="page-nav" >
+     <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+     -->
+<!-- </div> -->
   
 
 
@@ -146,7 +161,6 @@
 
 
 
-           
   	
 
     <!-- After footer scripts -->
