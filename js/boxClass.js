@@ -1,4 +1,4 @@
-function Box(x, y, w, h, img,postTittle,postTime) {
+function Box(x, y, w, h, img,postTittle,postTime,postLink) {
 
     var options = {
         friction: 0.4,
@@ -15,6 +15,7 @@ function Box(x, y, w, h, img,postTittle,postTime) {
     this.isPressed = false;
     this.postTittle = postTittle;
     this.postTime = postTime;
+    this.postLink = postLink;
     
 
 
