@@ -51,7 +51,7 @@ class Box{
     
             if (!this.isPressed && !released) {
                 noStroke();
-                fill(0, 80); //透明度烟雾弹！
+                fill(255, 80); //透明度烟雾弹！
                 rect(0, 0, this.w, this.h);
     
             }

@@ -142,7 +142,7 @@ function workTittleGrenerate() {
         tittleSize = windowHeight * 0.08; //目标值
         var timeSize = tittleSize * 0.5;
         var textX;
-        var tittlePosY = height / 3;
+        var tittlePosY = height / 3 ;
 
         //=======创建 TITTLE 字符=========
         targetTittle = boxes[nowId].postTittle;
@@ -158,7 +158,6 @@ function workTittleGrenerate() {
             for (var i = 0; i < targetTittle.length; i++) {
                 if (i > 0) {
                     textX = textX + textWidth(targetTittle[i - 1]);
-
                 }
                 var f = new TittleChar(targetTittle[i], i, textX, tittlePosY, tittleSize, false);
                 tittleChars.push(f);
@@ -285,7 +284,7 @@ function placeShow() {
     textSize(infoSize);
     // noFill(0);
     noStroke();
-    fill(0, 150);
+    fill(0, 200);
     // strokeWeight(1);
     textStyle(BOLD);
     textAlign(CENTER);

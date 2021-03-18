@@ -132,13 +132,13 @@ TittleChar.prototype.out = function() {
 TittleChar.prototype.show = function() {
     if (this.transparent) {
         noFill();
-        fill(255, 80);
+        fill(255, 150);
         stroke(0, this.alpha);
         strokeWeight(1);
 
     } else {
         fill(0, this.alpha);
-        stroke(255, 200);
+        // stroke(255, 200);
         // strokeWeight(3);
         // noStroke();
     }

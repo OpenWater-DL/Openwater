@@ -106,7 +106,7 @@ function draw() {
 
     background(240);
     
-    pressedWorkImgShow();
+    // pressedWorkImgShow();
 
     showAllBoundaries();
     isPressed_placeShow();
