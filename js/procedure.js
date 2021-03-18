@@ -43,7 +43,7 @@ function loadMatterJs() {
 
     //创建带有图像的box
     for (let i = 0; i < imgP.length; i++) {
-        var imgScale = imgScaleNum(imgP[i].width);
+        let imgScale = imgScaleNum(imgP[i].width);
         boxes.push(
             new Box(random(50, width - 50), random(height, height / 2),
                 imgP[i].width * imgScale, imgP[i].height * imgScale,
@@ -58,6 +58,20 @@ function loadMatterJs() {
 }
 
 
+function showAllBoxes(){
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].update();
+        boxes[i].show();
+    }
+}
+
+
+function showAllBoundaries(){
+    for (let i = 0; i < boundaries.length; i++) {
+        boundaries[i].update();
+        boundaries[i].show();
+    }
+}
 
 function openUrl() {
 
@@ -73,12 +87,25 @@ function openUrl() {
 
 function imgScaleNum(w) {
     this.w = w;
-    var scaleTarget;
+    let scaleTarget;
     if (windowWidth < 900) {
-        scaleTarget = (width / 4) / this.w;
+        scaleTarget = (width / 6) / this.w;
 
     } else {
-        scaleTarget = (width / 6) / this.w;
+        scaleTarget = (width / 8) / this.w;
     }
     return scaleTarget;
+}
+
+
+function getNowId() {
+
+    if (mConstraint.body) {
+        for (var i = 0; i < boxes.length; i++) {
+            if (boxes[i].body == mConstraint.body) {
+                nowId = i; //实时判断当次点击的对象Id，进而确定是否和上次是一样的对象。
+            }
+        }
+    }
+
 }
