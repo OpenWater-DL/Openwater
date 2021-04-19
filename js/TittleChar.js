@@ -138,8 +138,8 @@ TittleChar.prototype.show = function() {
 
     } else {
         fill(0, this.alpha);
-        // stroke(255, 200);
-        // strokeWeight(3);
+        stroke(255, 200);
+        strokeWeight(3);
         // noStroke();
     }
 

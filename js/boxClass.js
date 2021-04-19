@@ -49,12 +49,12 @@ class Box{
             imageMode(CENTER);
             image(this.imgP, 0, 0, this.w, this.h);
     
-            if (!this.isPressed && !released) {
-                noStroke();
-                fill(255, 80); //透明度烟雾弹！
-                rect(0, 0, this.w, this.h);
-    
-            }
+    //         if (!this.isPressed && !released) {
+    //             noStroke();
+    //             fill(255, 80); //透明度烟雾弹！
+    //             rect(0, 0, this.w, this.h);
+    // 
+    //         }
     
     
     

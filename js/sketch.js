@@ -58,6 +58,7 @@ var windowIsResized = false;
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     nowWidth = windowWidth;
+    cursor('../favicon/default.png');
     hideImage();
     loadMatterJs();
 
@@ -160,5 +161,9 @@ function resetBoxes() {
             ));
     }
 
+
+}
+
+function touchEnded() {
 
 }
