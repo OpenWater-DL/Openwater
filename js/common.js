@@ -23,4 +23,25 @@ $(function(){
         
     });
 
+
+    $('<img />',{ src: 'path_to_animated.gif'});
+
+    $("#logo-img").hover(
+        function() {
+            $(this).attr("src", "/favicon/cupLogo-2.png");
+        },
+        function() {
+            $(this).attr("src", "/favicon/cupLogo.png");
+        }                         
+    );     
+    
+    $("#hi").hover(
+        function() {
+            $(this).attr("src", "/favicon/hi4.png");
+        },
+        function() {
+            $(this).attr("src", "/favicon/hi3.png");
+        }                         
+    );   
+
 })

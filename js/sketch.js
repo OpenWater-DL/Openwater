@@ -58,7 +58,7 @@ var windowIsResized = false;
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     nowWidth = windowWidth;
-    cursor('../favicon/default.png');
+    cursor('../favicon/circle.png');
     hideImage();
     loadMatterJs();
 
