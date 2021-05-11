@@ -44,4 +44,20 @@ $(function(){
         }                         
     );   
 
+
+
+    function scroll() {
+        var top = $("body").offset().top;//获取导航栏变色的位置距顶部的高度
+        var scrollTop = $(window).scrollTop();//获取当前窗口距顶部的高度
+        if (scrollTop <= top) {
+            $('.bg').css('background-color', 'transparent');
+        } else {
+            $('.bg').css('background-color', 'white');
+        }
+    }
+    $(window).on('scroll', function() {
+        scroll()
+    });
+
+
 })

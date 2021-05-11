@@ -1,0 +1,225 @@
+@media screen and (max-width:768px) ,(max-height:450px) {
+
+    html {
+        height: 100%;
+        cursor: url('../favicon/sqr.png'), default;
+    }
+
+    body {
+        width: 100%;
+        padding: 0;
+        background-color: #F0F0F0;
+
+        font-family: 'Open Sans', sans-serif;
+        cursor: url('../favicon/sqr.png'), default;
+
+    }
+
+    
+::selection {
+	background: yellow;
+	color: black;
+}
+
+    .container-fluid{
+        /* 这是写在body的类，保证父容器边距为0 */
+            padding:0;
+        
+        }
+
+        
+a {
+	cursor: url('../favicon/circle.png') 13 0, pointer;
+}
+        
+    /* 1-导航 */
+    .navbar {
+        z-index: 4;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+      
+ 
+    }
+
+    .bg{
+        z-index: 3;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        background-color: transparent;
+        opacity: 0.8;
+
+    }
+
+    .siteLogo {
+      position:absolute;
+        top: 20px;
+        left: 5vw;
+        width: 60px;
+        height: 60px;
+    }
+    .siteLogo img {
+        width: 100%;
+    }
+    .wave {
+        position:absolute;
+
+        height: 30px;
+        top: 15px;
+        left: 21vw;
+    }
+    #hi {
+        height: 100%;
+    }
+    .nav-list {
+        position:absolute;
+        top: 30px;
+        right: 1vw;
+    }
+    .nav-list li {
+        list-style: none;
+        float: right;
+        text-align:center;
+        margin: 0 1rem;
+    }
+    .nav-list a {
+        display: block;
+        width: 100%;
+    }
+    .nav-text {
+        color: black;
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+    
+    .nav-text:hover{
+        background-color:yellow;
+        color:black;
+        transition-duration: 0.5s;
+    
+    }
+
+    .nowHere {
+        text-decoration: underline;
+    }
+
+
+    /* about me */
+
+    
+.page-init {
+    position: absolute;
+	margin-top: 25vh;
+    margin:25vh 5vw;
+}
+
+    /* ______2-作品目录 ______*/
+    /* projects */
+.projects-container{
+
+    position: relative;
+
+    top: 10vh;
+    margin: 0;
+    padding: 0;
+	/* width:1230px; */
+
+}
+
+.projects-each {
+    min-width: 100vw;
+    margin:5vw auto;
+
+}
+
+.project-item {
+    overflow: hidden;
+    margin:0 auto;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.project-item:hover {
+	z-index: 2;
+	transform: scale(.9) rotate(2deg) ;
+	-webkit-box-shadow: 6px 8px 0px rgb(255, 251, 18);
+	box-shadow: 6px 8px 0px rgb(255, 251, 18);
+}
+
+
+
+    /* works */
+    .works-container {
+        position: relative;
+        top: 10vh;
+        margin: 0;
+        padding: 0;
+    }
+    .works-each {
+        max-width: 85vw;
+        margin:5vw auto;
+    }
+    .work-item {
+        overflow: hidden;
+        border-radius: 5px;
+        margin:0 auto;
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    .work-item img,.project-item img{
+        width:100%;
+    }
+
+    .work-item:hover {
+        z-index: 3;
+        transform: scale(0.9) rotate(6.18deg);
+        transition: transform 0.35s;
+        -webkit-box-shadow: 6px 8px 0px rgb(255, 251, 18);
+        box-shadow: 6px 8px 0px rgb(255, 251, 18);
+    }
+
+
+    /* ______3-作品页 ______*/
+
+
+
+    .portfolio-full {
+        position: relative;
+        top: 12vh;
+        
+        
+    }
+
+    .portfolio-full-flex {
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .page-info {
+        /* background-color:blue; */
+        margin: 20px;
+
+    }
+    .portfolio-content {
+        max-width: 100%;
+        /* position: relative; */
+        left: 0vw;
+        line-height: 2;
+        color: #555;
+    }
+    .portfolio-content img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .slide-top {
+        /* 返回顶部滚动条	 */
+        position: fixed;
+        top: 80%;
+        left: 90%;
+    }
+}

@@ -1,6 +1,10 @@
 @import 'p5.css';
+
+@media screen and (min-width:769px),(min-height:451px) {
+
 html {
 	height: 100%;
+	cursor: url('../favicon/sqr.png'), default;
 }
 
 body {
@@ -10,6 +14,9 @@ body {
 	cursor: url('../favicon/sqr.png'), default;
 	background-color: #F0F0F0;
 }
+
+
+
 
 ::selection {
 	background: yellow;
@@ -61,7 +68,7 @@ input:focus, textarea:focus {
 .page-info {
 	z-index: 5;
 	position: fixed;
-	top: 40vh;
+	top: 30vh;
 	padding-left: 60px;
 	margin-bottom: 60px;
 }
@@ -77,18 +84,17 @@ input:focus, textarea:focus {
 .portfolio-content {
 	position: absolute;
 	left: 32vw;
+	margin-left: 0px;
+	/* left: 360px; */
+
 	min-width: 900px;
 	padding-right: 5vh;
 	line-height: 2;
 	color: #555;
+
 }
 
-@media all and (max-width: 980px) {
-	.portfolio-content {
-		margin-left: 0px;
-		left: 360px;
-	}
-}
+
 
 .portfolio-content img {
 	max-width: 100%;
@@ -110,7 +116,6 @@ input:focus, textarea:focus {
 
 .portfolio-container {
 	min-width: 1280px;
-	border: red solid;
 }
 
 .page-icon {
@@ -224,9 +229,10 @@ a {
 
 
 
-.posts-container {
+.projects-container {
 	position: absolute;
 	left: 15vw;
+	top:10vh;
 	/* width:1230px; */
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
@@ -235,6 +241,7 @@ a {
 .projects-each {
 	/* border:red solid; */
 	margin-bottom: 70px;
+	left:10vw;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 }
@@ -261,6 +268,7 @@ a {
 	max-width: 1300px;
 	position: absolute;
 	left: 30vh;
+	top:10vh;
 	margin: 0;
 	padding: 0;
 	-webkit-transition-duration: .5s;
@@ -355,17 +363,5 @@ a {
 
 } */
 
-.page-nav {
-	width: 50%;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.page-nav a, span {
-	font-size: 1rem;
-	font-weight: 700;
-	margin: 0 10px;
-	color: rgb(80, 80, 80);
-	font-family: 'Open Sans', sans-serif;
 
 }
