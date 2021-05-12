@@ -205,17 +205,40 @@ a {
         margin: 20px;
 
     }
+    .page-info .describe p{
+        position: relative;
+        top:3vw;
+        width:70vw;
+        line-height: 2;
+    
+    }
+
     .portfolio-content {
         max-width: 100%;
         /* position: relative; */
         left: 0vw;
-        line-height: 2;
+        line-height: 1.5;
         color: #555;
     }
+
+    .portfolio-content .text{
+        margin:.5rem 1rem 1rem 1rem;
+
+    }
+
     .portfolio-content img {
         max-width: 100%;
         margin: 0 auto;
     }
+
+    .portfolio-content embed{
+        width:100%;
+        height:30vh;
+        
+        }
+
+
+
     .slide-top {
         /* 返回顶部滚动条	 */
         position: fixed;
