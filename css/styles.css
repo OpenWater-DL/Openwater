@@ -101,7 +101,7 @@ input:focus, textarea:focus {
 
 }
 
-.portfolio-content embed{
+.portfolio-content embed,video{
 width:100%;
 height:506px;
 
