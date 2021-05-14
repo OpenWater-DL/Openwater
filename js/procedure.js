@@ -73,26 +73,31 @@ function showAllBoundaries(){
     }
 }
 
-function openUrl() {
+// 获取当前点击的对象的链接
+
+
+function getNowUrl(){
 
     for (var i = 0; i < boxes.length; i++) {
         if (boxes[i].body == mConstraint.body) {
-            var link = boxes[i].postLink;
-            window.open(link, '_blank');
+            nowLink = boxes[i].postLink;
+          
         }
     }
 
+ 
 }
+
 
 
 function imgScaleNum(w) {
     this.w = w;
     let scaleTarget;
-    if (windowWidth < 900) {
+    if (windowWidth < windowHeight) {
         scaleTarget = (width / 4) / this.w;
 
     } else {
-        scaleTarget = (width / 6) / this.w;
+        scaleTarget = (height / 4) / this.w;
     }
     return scaleTarget;
 }

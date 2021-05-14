@@ -2,7 +2,7 @@
 //          定义一个字的类
 //==================================
 
-const letters = `冫冖讠厂匚刂冂亻勹厶廴卩阝氵丬忄宀abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ●▶︎`;
+const letters = `冫冖讠厂匚刂冂亻勹厶廴卩阝氵丬忄宀abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 var overTime = 15;
 var rand = [];
 var oneSize;

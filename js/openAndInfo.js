@@ -28,8 +28,10 @@ function isPressed_placeShow() {
     placeHeight = windowHeight / 4;
     targetY = windowHeight;
     if (mConstraint.body) { //【状态1】被点击
+        getNowUrl();
         if (mouseY > dragPlaceY) {
             mouseReady = true; //【状态2】拖拽至打开区域
+         
         } else {
             mouseReady = false;
         }
@@ -39,6 +41,8 @@ function isPressed_placeShow() {
     } else {
         placeOut(); //【状态3】未拖拽至打开去，松开。
     }
+
+
 }
 
 //------

@@ -2,6 +2,9 @@
 
 @media screen and (min-width:769px) {
 
+/* ____基础部分____ */
+
+
 html {
 	height: 100%;
 	cursor: url('../favicon/sqr.png'), default;
@@ -16,6 +19,14 @@ body {
 }
 
 
+.body-container {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	cursor: url('../favicon/circle.png') 13 0, pointer;
+}
 
 
 ::selection {
@@ -58,92 +69,16 @@ input:focus, textarea:focus {
 	outline: none;
 }
 
-.slide-top {
-	/* 返回顶部滚动条	 */
-	position: fixed;
-	top: 80%;
-	left: 90%;
-}
 
-.page-info {
-	z-index: 5;
-	position: fixed;
-	top: 30vh;
-	padding-left: 60px;
-	margin-bottom: 60px;
-}
+/* ____导航栏____ */
 
-.page-tittle {
-	font-size: 2rem;
-	font-weight: 500;
-	margin-top: 60px;
-}
-
-.page-info .describe p{
-	position: relative;
-    top:3vw;
-    width:20vw;
-	line-height: 2;
-
-}
-
-
-.portfolio-content {
-	position: absolute;
-	left: 32vw;
-	margin-left: 0px;
-	/* left: 360px; */
-
-	min-width: 900px;
-	padding-right: 5vh;
-	line-height: 2;
-	color: #555;
-
-}
-
-.portfolio-content embed,video{
-width:100%;
-height:506px;
-
-}
-
-.portfolio-content img {
-	max-width: 100%;
-	display: block;
-	margin: 0 auto;
-}
-
-.portfolio-content a {
-	color: #333;
-	text-decoration: none;
-	border-bottom: 1px solid #bbb;
-}
-
-.portfolio-content a:hover {
-	color: #000;
-	text-decoration: none;
-	border-bottom: 1px solid #555;
-}
-
-.portfolio-container {
-	min-width: 1280px;
-}
-
-.page-icon {
-	display: inline-block !important;
-	width: 20px !important;
-}
-
-h1, h2, h3 {
-	font-family: 'Open Sans', sans-serif;
-	letter-spacing: 1px;
-	font-weight: 300;
-	margin-bottom: 20px;
-}
 
 a:hover{
 	text-decoration:none;
 }
+
+
+
 .navbar{
 	z-index:4;	
 	}
@@ -166,7 +101,7 @@ a:hover{
 	position: fixed;
 height:30px;
 	top: 15px;
-	left: 150px;
+	left: 140px;
 }
 
 #hi{
@@ -202,98 +137,45 @@ height: 100%;
 	text-decoration:underline;
 }
 
-.pgbg-black{
-	background-color:black;
-}
 
-.portfolio-a {
-	width: 600px;
-	height: 379px;
-	margin-bottom: 30px;
-	/* border-radius: 5px; */
-	overflow: hidden;
-}
-
-.portfolio-img {
-	width: 100%;
-	display: block;
-	object-fit: cover;
-}
-
-.project-img {
-	width: 100%;
-	display: block;
-	object-fit: cover;
-}
-
-/* Image Hover Effect */
-
-a {
-	cursor: url('../favicon/circle.png') 13 0, pointer;
-}
-
-.body-container {
-	margin: 0;
-	padding: 0;
-}
+/* ____About Me ____ */
 
 .page-init {
 	margin-top: 25vh;
 }
 
 
-
-.projects-container {
-	position: absolute;
-	left: 15vw;
-	top:10vh;
-	/* width:1230px; */
-	-webkit-transition-duration: .5s;
-	transition-duration: .5s;
-}
-
-.projects-each {
-	/* border:red solid; */
-	margin-bottom: 70px;
-	left:10vw;
-	-webkit-transition-duration: .5s;
-	transition-duration: .5s;
-}
-
-.project-item {
-	max-height: 300px;
-	min-width: 690px;
-	/* border-radius: 5px; */
-	overflow: hidden;
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-.project-item:hover {
-	z-index: 2;
-	transform: scale(.95) rotate(2deg) translate(-10vw, 0);
-	-webkit-box-shadow: 6px 8px 0px rgb(255, 251, 18);
-	box-shadow: 6px 8px 0px rgb(255, 251, 18);
-}
+/* ____Works页 ____ */
 
 .works-container {
-	/* min-width: 800px; */
-	max-width: 1300px;
+	/* border:solid green; */
 	position: absolute;
 	left: 30vh;
+	right: 5vh;
+	max-width: 1330px;
 	top:10vh;
 	margin: 0;
 	padding: 0;
+
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 }
 
 .works-each {
-	min-width: 380px;
-	min-height: 220px;
-	padding-right: 70px;
-	margin-bottom: 70px;
+	display: block;
+	width: 15vh;
+	min-width: 250px;
+	
+	max-width: 400px;
+
+	margin: 0 70px 70px 0px;
+
 	/* border:solid red; */
 }
 
@@ -313,69 +195,160 @@ a {
 	box-shadow: 6px 8px 0px rgb(255, 251, 18);
 }
 
-.hovereffect {
-	float: left;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
+
+
+
+
+/* ____Projects页 ____ */
+
+.projects-container {
+	position: absolute;
+	left: 15vw;
+	top:10vh;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
 
-.hovereffect .overlay {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	overflow: hidden;
-	top: 0;
-	left: 0;
+.projects-each {
+	max-width:800px;
+	margin-bottom: 70px;
+	left:15vw;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
 
-.hovereffect .overlay-text {
-	font-size: 1.3rem;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	color: #000;
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	filter: alpha(opacity=0);
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+.project-item {
+	background-color:blue;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.34);
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-.overlay-title {
+.project-item .portfolio-img{
+	height: 300px;
+	width: 100%;
+    object-fit: cover;
+}
+
+.project-item:hover {
+	z-index: 2;
+	transform: scale(.95) rotate(2deg) translate(-10vw, 0);
+	-webkit-box-shadow: 6px 8px 0px rgb(255, 251, 18);
+	box-shadow: 6px 8px 0px rgb(255, 251, 18);
+}
+
+/* project & work 共用 */
+
+.portfolio-img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* ____详情文章页信息内容 ____ */
+
+
+.page-info {
+	z-index: 5;
+	position: fixed;
+	top: 30vh;
+	padding-left: 60px;
+	margin-bottom: 60px;
+}
+
+.page-tittle {
 	font-size: 2rem;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	/* font-weight: 500; */
+	margin-top: 60px;
 }
 
-.hovereffect:hover .overlay-text {
-	opacity: 1;
-	filter: alpha(opacity=100);
-}
-
-.hovereffect img {
-	display: block;
+.page-info .describe p{
 	position: relative;
-	max-width: none;
-	width: 100%;
-	height: 100%;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+    top:3vw;
+    width:20vw;
+	line-height: 2;
+
 }
 
-/* 
-.hovereffect:hover img {
-	opacity: 0.1;
-	filter: alpha(opacity=10);
 
-} */
+.portfolio-content {
+	position: absolute;
+	left: 32vw;
+	margin-left: 0px;
+	/* left: 360px; */
+
+	min-width: 900px;
+	padding-right: 5vh;
+	line-height: 2;
+	color: #555;
+	text-align: center
+}
+
+.portfolio-content embed,video{
+width:100%;
+height:506px;
+
+}
+
+.portfolio-content img {
+	/* width: 100%; */
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.portfolio-content a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid #bbb;
+}
+
+.portfolio-content a:hover {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #555;
+}
+
+.portfolio-container {
+	min-width: 1280px;
+}
+
+
+h1, h2, h3 {
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+
+/* ____文章页上下篇+回顶部 ____ */
+
+.post-nav {
+	position: fixed;
+	width:40px;
+	bottom: 5vh;
+	left: 30vw;
+
+	display:flex;
+	flex-direction: column;
+
+}
+.post-nav a{
+	margin-bottom: 20px;
+	}
+
+
+.post-nav img {
+	width: 100%;
+	/* opacity: 0.7; */
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+
+.post-nav img:hover {
+	transform: scale(.9) rotate(2deg);
+	/* opacity: 0.7; */
+	transition: transform 0.35s;
+}
 
 
 }

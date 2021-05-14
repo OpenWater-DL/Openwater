@@ -54,6 +54,8 @@ function preload() {
 
 var nowWidth, nowHeight;
 var windowIsResized = false;
+var nowLink;
+var touchEnd = true;
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
@@ -61,39 +63,29 @@ function setup() {
     cursor('../favicon/circle.png');
     hideImage();
     loadMatterJs();
-
-    canvas.mouseReleased(
-        function() {
-            released = true;
-            if (tittleChars != []) {
-                for (var i = 0; i < targetTittle.length; i++) {
-                    tittleChars[i].changeToOut();
-                
-
-                }
-            }
-            if (timeChars != []) {
-                for (var i = 0; i < targetTime.length; i++) {
-                    timeChars[i].changeToOut();
-                }
-            }
-
-            if (mouseReady) {
-                openUrl();
-            }
-        });
-
-
-
-    ;
-
     waveSetup();
+    canvas.mouseReleased(mouseAndTouch_released);
+    canvas.touchEnded(mouseAndTouch_released);
+
+
+}
+
+function touchEnded() {
+    if (mouseReady) { 
+        window.open(nowLink, '_self');
+    }
+}
+
+function mouseReleased() {
+    if (mouseReady) { 
+        window.open(nowLink, '_blank');
+    }
 
 }
 
 
-function draw() {
 
+function draw() {
 
     getNowId();
 
@@ -106,13 +98,17 @@ function draw() {
 
 
     background(240);
-    
+
     // pressedWorkImgShow();
 
     showAllBoundaries();
     isPressed_placeShow();
     showAllBoxes();
     isPressed_infoShow();
+
+
+
+
 
 
 }
@@ -164,6 +160,21 @@ function resetBoxes() {
 
 }
 
-function touchEnded() {
+function mouseAndTouch_released() {
+    released = true;
+
+    if (tittleChars != []) {
+        for (var i = 0; i < targetTittle.length; i++) {
+            tittleChars[i].changeToOut();
+
+
+        }
+    }
+    if (timeChars != []) {
+        for (var i = 0; i < targetTime.length; i++) {
+            timeChars[i].changeToOut();
+        }
+    }
+
 
 }
