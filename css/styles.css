@@ -73,15 +73,15 @@ input:focus, textarea:focus {
 /* ____导航栏____ */
 
 
-a:hover{
-	text-decoration:none;
-}
-
-
-
 .navbar{
 	z-index:4;	
 	}
+
+	.navbar a:hover{
+		text-decoration:none;
+	}
+	
+
 
 .siteLogo {
 	position:fixed;
@@ -202,6 +202,7 @@ height: 100%;
 /* ____Projects页 ____ */
 
 .projects-container {
+	width: 1200px;
 	position: absolute;
 	left: 15vw;
 	top:10vh;
@@ -270,6 +271,21 @@ height: 100%;
 
 }
 
+.info-a {
+	color:black;
+	font-style: italic;
+	text-decoration: underline;
+	transition: .35s ease-in-out;
+	
+}
+
+.info-a:hover  {
+	background-color:yellow;
+	color:black;
+	text-decoration: none ;
+	transition: .35s ease-in-out;
+
+}
 
 .portfolio-content {
 	position: absolute;
@@ -281,7 +297,7 @@ height: 100%;
 	padding-right: 5vh;
 	line-height: 2;
 	color: #555;
-	text-align: center
+	/* text-align: center */
 }
 
 .portfolio-content embed,video{
@@ -319,6 +335,39 @@ h1, h2, h3 {
 	margin-bottom: 20px;
 }
 
+/* ____文章页可被点击的图片 ____ */
+
+.content-a-img{
+
+	transition: .35s ease-in-out;
+}
+
+.content-a-img:hover{
+
+	filter:brightness(90%);
+
+}
+
+/* ____瀑布流式的图片类布局 ____ */
+.content-flex-row{
+	display:flex;
+	flex-wrap: wrap;
+	padding:0 4px;
+}
+
+.content-flex-col{
+flex:25%;
+max-width: 33.3%;
+padding:0 4px;
+
+}
+
+.content-flex-col img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 5px;
+  }
 
 /* ____文章页上下篇+回顶部 ____ */
 
