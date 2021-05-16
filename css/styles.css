@@ -368,6 +368,8 @@ h1, h2, h3 {
   
   .grid-col {
 	float: left;
+	width: 33%;
+	/* 注意，这个width会影响图片的排布，没有的话会不大正常，就还是加上比较好。 */
   }
   .grid-col--1,.grid-col--2{
 	margin-right:.4em;
