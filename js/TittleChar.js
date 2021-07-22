@@ -176,3 +176,4 @@ TittleChar.prototype.out_show = function() {
 
     pop();
 }
+

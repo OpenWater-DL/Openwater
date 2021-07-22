@@ -1,10 +1,4 @@
-function hideImage() {
-    //隐藏原生html展示的图片
-    var allImg = selectAll(".portfolio-img");
-    for (let i = 0; i < allImg.length; i++) {
-        allImg[i].style("display", "none");
-    }
-}
+
 
 
 function loadMatterJs() {
@@ -20,20 +14,20 @@ function loadMatterJs() {
     engine.world.gravity.y = -0.1;
 
 
-    var options = {
+    let options = {
         mouse: canvasMouse
     }
     mConstraint = MouseConstraint.create(engine, options);
     World.add(world, mConstraint);
 
     rectMode(CENTER);
-    var h = 50;
-    var heightMax = height * 10;
-    var widthMax = width * 10;
-    var ground1 = new Boundary(width / 2, height, widthMax, h, "BOTTOM");
-    var ground2 = new Boundary(width / 2, height / 3, widthMax, h, "TOP");
-    var ground3 = new Boundary(0, height / 2, h, heightMax, "LEFT");
-    var ground4 = new Boundary(width, height / 2, h, heightMax, "RIGHT");
+    let h = 50;
+    let heightMax = height * 10;
+    let widthMax = width * 10;
+    let ground1 = new Boundary(width / 2, height, widthMax, h, "BOTTOM");
+    let ground2 = new Boundary(width / 2, height / 3, widthMax, h, "TOP");
+    let ground3 = new Boundary(0, height / 2, h, heightMax, "LEFT");
+    let ground4 = new Boundary(width, height / 2, h, heightMax, "RIGHT");
     boundaries.push(ground1);
     boundaries.push(ground2);
     boundaries.push(ground3);

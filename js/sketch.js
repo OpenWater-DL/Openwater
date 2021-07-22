@@ -1,3 +1,5 @@
+
+
 var canvas;
 //--- matter.js
 var Engine = Matter.Engine,
@@ -61,7 +63,6 @@ function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     nowWidth = windowWidth;
     cursor('../favicon/circle.png');
-    hideImage();
     loadMatterJs();
     waveSetup();
     canvas.mouseReleased(mouseAndTouch_released);
