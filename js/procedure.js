@@ -88,10 +88,10 @@ function imgScaleNum(w) {
     this.w = w;
     let scaleTarget;
     if (windowWidth < windowHeight) {
-        scaleTarget = (width / 4) / this.w;
+        scaleTarget = (windowWidth / 4) / this.w;
 
     } else {
-        scaleTarget = (height / 4) / this.w;
+        scaleTarget = (windowHeight / 4) / this.w;
     }
     return scaleTarget;
 }

@@ -3,13 +3,13 @@
 	/* ____基础部分____ */
 	html {
 		height: 100%;
-		cursor: url('../favicon/sqr.png'), default;
+		cursor: url('../favicon/sqr.png')7 7, default;
 	}
 	body {
 		z-index: -4;
 		height: 100%;
 		font-family: 'Open Sans', sans-serif;
-		cursor: url('../favicon/sqr.png'), default;
+		cursor: url('../favicon/sqr.png')7 7, default;
 		background-color: #F0F0F0;
 	}
 	.body-container {
@@ -79,7 +79,7 @@
 		}
 	}
 	a {
-		cursor: url('../favicon/circle.png') 13 0, pointer;
+		cursor: url('../favicon/circle.png') 8 8, pointer;
 	}
 	::selection {
 		background: yellow;
@@ -129,7 +129,11 @@
 	}
 	/* ____导航栏____ */
 	.navbar {
-		z-index: 4;
+		z-index: 2;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 	.navbar a:hover {
 		text-decoration: none;
@@ -178,7 +182,15 @@
 	}
 	/* ____About Me ____ */
 	.page-init {
+		min-width: 400px;
+		max-width: 600px;
+		margin: 30px;
+		position: absolute;
 		margin-top: 25vh;
+		left: 32vw;
+		line-height: 2;
+		color: #555;
+		z-index: 7;
 	}
 	/* ____Works页 ____ */
 	.works-container {
@@ -264,23 +276,18 @@
 		top: 30vh;
 		padding-left: 60px;
 		margin-bottom: 60px;
-
-	
 	}
 	.page-tittle {
 		font-size: 2rem;
 		/* font-weight: 500; */
 		margin-top: 60px;
 	}
-	.page-info .describe p{
+	.page-info .describe p {
 		position: relative;
 		top: 3vw;
 		width: 20vw;
 		line-height: 2;
-
 	}
-
-
 	.info-a {
 		color: black;
 		font-style: italic;

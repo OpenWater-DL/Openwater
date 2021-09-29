@@ -28,6 +28,8 @@ var dragPlaceY;
 var released = true;
 
 
+
+
 $(function() {
     //遍历对象-获得作品名称，图片，链接
     $(".portfolio-img").each(function() {
@@ -48,21 +50,29 @@ $(function() {
 function preload() {
     for (let i = 0; i < imagesPath.length; i++) {
         let t = loadImage(imagesPath[i]); //把封面图片加载到p5里
-
         imgP.push(t);
     }
 }
 
 
-var nowWidth, nowHeight;
 var windowIsResized = false;
 var nowLink;
 var touchEnd = true;
 
 function setup() {
+
+    // window.location.reload(); 
+    let date=new Date();
+
+    console.log('setup'+date.getMinutes()+":"+date.getSeconds());
+    
+
     canvas = createCanvas(windowWidth, windowHeight);
-    nowWidth = windowWidth;
     cursor('../favicon/circle.png');
+    if(imgP.length==0){
+        window.location.reload(); 
+    }    //防止返回加载不出来box。
+
     loadMatterJs();
     waveSetup();
     canvas.mouseReleased(mouseAndTouch_released);
@@ -88,6 +98,13 @@ function mouseReleased() {
 
 function draw() {
 
+    if(boxes.length==0){
+
+
+        resetBoxes();
+    }   
+
+
     getNowId();
 
     if (windowIsResized) {
@@ -99,8 +116,6 @@ function draw() {
 
 
     background(240);
-
-    // pressedWorkImgShow();
 
     showAllBoundaries();
     isPressed_placeShow();
