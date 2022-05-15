@@ -63,73 +63,105 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+
+  <!-- 所有页面都会基于这个基本layout排列 -->
+
   <body>
-  
 
       <div class="container-fluid  body-container main" id='main'>
         <!-- Header -->
+
         
-  <div class="bg"></div>
-<nav class="navbar" >
-  
-    <a id="site-logo" href="/">
-        <img id="logo-img" src="/favicon/cupLogo.png">
-
-       
-    </a>
-
-    <a id="about-icon" href="/about-me/">
-        <img id="hi" src="/favicon/hi3.png" alt="">
-    </a>
-
-
-    <ul class="nav-list">
-        
-
-                    <li> <a class="nav-text " href="/projects/">Projects</a></li>
-
-                    <li> <a class="nav-text" href="/works/">Works</a></li>
-                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
-
-                                      
-      </ul>
-
-
-
-</nav>
-     
       
-      <!-- <div class="col-12 mb-4">
+      <div class="top-bg"></div>
+
+
+     
+     
+     
+
+
+   
+   
+   
+
+    
+                <div class="lg">
+                    <!-- 大屏菜单 -->
+                    <nav class="navbar">
+                    <ul class="nav-list">
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>
+            
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="sm">
+                    <!-- 小屏菜单 -->
+                    <input type="checkbox" name="" id="sm-menu-input">
+                    <label for="sm-menu-input">   <div id="menu-btn"> 
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+
+                    </div></label>
+                    <div id="nav-bg-sm"></div>
+                    <ul id="nav-list-sm">
+                        <li><a class="nav-text " href="/.">Home</a></li>
+                        <li><a class="nav-text " href="/about-me/">About</a></li>
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>                
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    
+                    </ul>
+
+                </div>
+                
+                
+            
+
+
+
+
+
+<!-- <div class="col-12 mb-4">
   <img class="img-fluid project-img" src="/images/" alt="天地时纪">
 </div> -->
 
+<h1 class="post-title ">
+    天地时纪
+</h1>
+<p class="post-work-type"> Design</p>
 
 
-<section class="">  
+<div class="portfolio-container">
 
-    <div class="portfolio-container">
-    
-            <div class=" post-info">
-                <h1 class="post-title ">
-                    天地时纪
-                </h1>
-                <date class="post-time ">
+    <div class="left post-info">
+        <div class="post-describe">
+            <p>
+                课题项目,输出的载体是“纪念邮册”。干支符号与悠久的华夏历史世界观的联结，既让我感到有趣，同时又感到十分难以识读。于是抱着“想理解”的心态，用现代的设计语言去尝试梳理了这套体系的“规则”。
+            </p>
+
+        </div>
+
+        <!-- <date class="post-time ">
                     <p>
-                        2017-04
+                      Created in  2017
                     </p>
-                </date>
-                <div class="post-describe">
-                    <p>
-                        课题项目,输出的载体是“纪念邮册”。干支符号与悠久的华夏历史世界观的联结，既让我感到有趣，同时又感到十分难以识读。于是抱着“想理解”的心态，用现代的设计语言去尝试梳理了这套体系的“规则”。
-        
-                    </p>      
-        
-                </div>
-            </div>       
-           
+                </date> -->
 
-            <div class="post-content">
-                <div style=" background-color:black; ">
+         
+                             
+                     
+                          
+
+
+    </div>
+
+
+    <div class=" right">
+        <div class="post-content">
+            <div style=" background-color:black; ">
 
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2017-TianDiShiJi/2.jpg"></p>
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2017-TianDiShiJi/1.jpg"></p>
@@ -154,40 +186,48 @@
 
 
 
-            </div>
+        </div>
 
-    
-        
+        <div class='post-copyright'>
+            <p> © 2022 开水OPENWATER</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<!-- 
   <nav class="post-nav">
-    <a class='slide-top'>
-      
-      <img src="/favicon/top@2x.png" alt="">
-     </a>
-    
-    
-      <a href="/2017/06/01/2017%E6%97%A5%E5%B8%B8%E6%B6%82%E9%B8%A6/" id="post-nav-newer" class="post-nav-link">
-            <img src="/favicon/newer@2x.png" alt="">
-          </a>
-    
+  
     
       <a href="/2017/02/01/2017hbBox/" id="post-nav-older" class="post-nav-link">
-        <img src="/favicon/older@2x.png" alt="">
+        <img src="/favicon/older.png" alt="">
       </a>
     
 
     
+      <a href="/2017/06/01/2017%E6%97%A5%E5%B8%B8%E6%B6%82%E9%B8%A6/" id="post-nav-newer" class="post-nav-link">
+            <img src="/favicon/prev.png" alt="">
+          </a>
+    
+
+   
+    
+
   
   </nav>
-  
+   -->
 
-   
-
-    </div>
-</section>
-   
+  <div class="post-back-btn">
 
 
 
+    
+
+
+  </div>
 
 
     <!-- After footer scripts -->

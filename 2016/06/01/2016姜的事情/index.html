@@ -63,73 +63,105 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+
+  <!-- 所有页面都会基于这个基本layout排列 -->
+
   <body>
-  
 
       <div class="container-fluid  body-container main" id='main'>
         <!-- Header -->
+
         
-  <div class="bg"></div>
-<nav class="navbar" >
-  
-    <a id="site-logo" href="/">
-        <img id="logo-img" src="/favicon/cupLogo.png">
-
-       
-    </a>
-
-    <a id="about-icon" href="/about-me/">
-        <img id="hi" src="/favicon/hi3.png" alt="">
-    </a>
-
-
-    <ul class="nav-list">
-        
-
-                    <li> <a class="nav-text " href="/projects/">Projects</a></li>
-
-                    <li> <a class="nav-text" href="/works/">Works</a></li>
-                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
-
-                                      
-      </ul>
-
-
-
-</nav>
-     
       
-      <!-- <div class="col-12 mb-4">
+      <div class="top-bg"></div>
+
+
+     
+     
+     
+
+
+   
+   
+   
+
+    
+                <div class="lg">
+                    <!-- 大屏菜单 -->
+                    <nav class="navbar">
+                    <ul class="nav-list">
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>
+            
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="sm">
+                    <!-- 小屏菜单 -->
+                    <input type="checkbox" name="" id="sm-menu-input">
+                    <label for="sm-menu-input">   <div id="menu-btn"> 
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+
+                    </div></label>
+                    <div id="nav-bg-sm"></div>
+                    <ul id="nav-list-sm">
+                        <li><a class="nav-text " href="/.">Home</a></li>
+                        <li><a class="nav-text " href="/about-me/">About</a></li>
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>                
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    
+                    </ul>
+
+                </div>
+                
+                
+            
+
+
+
+
+
+<!-- <div class="col-12 mb-4">
   <img class="img-fluid project-img" src="/images/" alt="姜的事情">
 </div> -->
 
+<h1 class="post-title ">
+    姜的事情
+</h1>
+<p class="post-work-type"> Design</p>
 
 
-<section class="">  
+<div class="portfolio-container">
 
-    <div class="portfolio-container">
-    
-            <div class=" post-info">
-                <h1 class="post-title ">
-                    姜的事情
-                </h1>
-                <date class="post-time ">
+    <div class="left post-info">
+        <div class="post-describe">
+            <p>
+                大一第一个课程“观察记录”要求选择一种自然物进行观察，接着最后一个课程“编排设计“接续了内容，要求用当时的观察对象进行编排。我的观察对象是姜。
+            </p>
+
+        </div>
+
+        <!-- <date class="post-time ">
                     <p>
-                        2016-06
+                      Created in  2016
                     </p>
-                </date>
-                <div class="post-describe">
-                    <p>
-                        大一第一个课程“观察记录”要求选择一种自然物进行观察，接着最后一个课程“编排设计“接续了内容，要求用当时的观察对象进行编排。我的观察对象是姜。
-        
-                    </p>      
-        
-                </div>
-            </div>       
-           
+                </date> -->
 
-            <div class="post-content">
-                <div style=" background-color:#ECECEC; ">
+         
+                             
+                     
+                          
+
+
+    </div>
+
+
+    <div class=" right">
+        <div class="post-content">
+            <div style=" background-color:#ECECEC; ">
 <a  target="_blank" rel="noopener" href="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2016-jiang/book-jiang-compressed-2.png" class="fancybox" data-fancybox="gallery1"><img class="content-a-img py-4" src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2016-jiang/book-jiang-compressed-2.png" style="padding:0 2rem;"></a>
 
 
@@ -170,40 +202,48 @@
 
 
 </section>
-            </div>
+        </div>
 
-    
-        
+        <div class='post-copyright'>
+            <p> © 2022 开水OPENWATER</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<!-- 
   <nav class="post-nav">
-    <a class='slide-top'>
-      
-      <img src="/favicon/top@2x.png" alt="">
-     </a>
-    
-    
-      <a href="/2016/09/01/2016%E5%AE%9A%E6%A0%BC%E5%8A%A8%E7%94%BB/" id="post-nav-newer" class="post-nav-link">
-            <img src="/favicon/newer@2x.png" alt="">
-          </a>
-    
+  
     
       <a href="/2016/03/01/2016%E5%9B%BE%E5%BD%A2%E8%AE%BE%E8%AE%A1/" id="post-nav-older" class="post-nav-link">
-        <img src="/favicon/older@2x.png" alt="">
+        <img src="/favicon/older.png" alt="">
       </a>
     
 
     
+      <a href="/2016/09/01/2016%E5%AE%9A%E6%A0%BC%E5%8A%A8%E7%94%BB/" id="post-nav-newer" class="post-nav-link">
+            <img src="/favicon/prev.png" alt="">
+          </a>
+    
+
+   
+    
+
   
   </nav>
-  
+   -->
 
-   
-
-    </div>
-</section>
-   
+  <div class="post-back-btn">
 
 
 
+    
+
+
+  </div>
 
 
     <!-- After footer scripts -->

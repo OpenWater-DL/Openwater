@@ -63,73 +63,105 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+
+  <!-- 所有页面都会基于这个基本layout排列 -->
+
   <body>
-  
 
       <div class="container-fluid  body-container main" id='main'>
         <!-- Header -->
+
         
-  <div class="bg"></div>
-<nav class="navbar" >
-  
-    <a id="site-logo" href="/">
-        <img id="logo-img" src="/favicon/cupLogo.png">
-
-       
-    </a>
-
-    <a id="about-icon" href="/about-me/">
-        <img id="hi" src="/favicon/hi3.png" alt="">
-    </a>
-
-
-    <ul class="nav-list">
-        
-
-                    <li> <a class="nav-text " href="/projects/">Projects</a></li>
-
-                    <li> <a class="nav-text" href="/works/">Works</a></li>
-                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
-
-                                      
-      </ul>
-
-
-
-</nav>
-     
       
-      <!-- <div class="col-12 mb-4">
+      <div class="top-bg"></div>
+
+
+     
+     
+     
+
+
+   
+   
+   
+
+    
+                <div class="lg">
+                    <!-- 大屏菜单 -->
+                    <nav class="navbar">
+                    <ul class="nav-list">
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>
+            
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="sm">
+                    <!-- 小屏菜单 -->
+                    <input type="checkbox" name="" id="sm-menu-input">
+                    <label for="sm-menu-input">   <div id="menu-btn"> 
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+
+                    </div></label>
+                    <div id="nav-bg-sm"></div>
+                    <ul id="nav-list-sm">
+                        <li><a class="nav-text " href="/.">Home</a></li>
+                        <li><a class="nav-text " href="/about-me/">About</a></li>
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>                
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    
+                    </ul>
+
+                </div>
+                
+                
+            
+
+
+
+
+
+<!-- <div class="col-12 mb-4">
   <img class="img-fluid project-img" src="/images/" alt="外销扇文创展示">
 </div> -->
 
+<h1 class="post-title ">
+    外销扇文创展示
+</h1>
+<p class="post-work-type"> Design</p>
 
 
-<section class="">  
+<div class="portfolio-container">
 
-    <div class="portfolio-container">
-    
-            <div class=" post-info">
-                <h1 class="post-title ">
-                    外销扇文创展示
-                </h1>
-                <date class="post-time ">
+    <div class="left post-info">
+        <div class="post-describe">
+            <p>
+                广东省博x广美的合作课题。<br>为十三行外销扇的文创产品设计地铁展示橱窗。<br>此概念提案获2018广东省博“中国外销扇文创产品设计创意展示设计”一等奖。
+            </p>
+
+        </div>
+
+        <!-- <date class="post-time ">
                     <p>
-                        2018-06
+                      Created in  2018
                     </p>
-                </date>
-                <div class="post-describe">
-                    <p>
-                        广东省博x广美的合作课题。<br>为十三行外销扇的文创产品设计地铁展示橱窗。<br>此概念提案获2018广东省博“中国外销扇文创产品设计创意展示设计”一等奖。
-        
-                    </p>      
-        
-                </div>
-            </div>       
-           
+                </date> -->
 
-            <div class="post-content">
-                <div style=" background-color:black; ">
+         
+                             
+                     
+                          
+
+
+    </div>
+
+
+    <div class=" right">
+        <div class="post-content">
+            <div style=" background-color:black; ">
 <video width="320" height="240" controls poster="" >
   <source src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018-windowDisplay/%E6%A9%B1%E7%AA%97%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C.mp4"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
@@ -147,40 +179,48 @@
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018-windowDisplay/%E6%A9%B1%E7%AA%971-%E4%BE%A7.png"></p>
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018-windowDisplay/%E6%A9%B1%E7%AA%972.png"></p>
 
-            </div>
+        </div>
 
-    
-        
+        <div class='post-copyright'>
+            <p> © 2022 开水OPENWATER</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<!-- 
   <nav class="post-nav">
-    <a class='slide-top'>
-      
-      <img src="/favicon/top@2x.png" alt="">
-     </a>
-    
-    
-      <a href="/2018/07/01/2018Pool/" id="post-nav-newer" class="post-nav-link">
-            <img src="/favicon/newer@2x.png" alt="">
-          </a>
-    
+  
     
       <a href="/2018/04/01/2018-VF-web/" id="post-nav-older" class="post-nav-link">
-        <img src="/favicon/older@2x.png" alt="">
+        <img src="/favicon/older.png" alt="">
       </a>
     
 
     
+      <a href="/2018/07/01/2018Pool/" id="post-nav-newer" class="post-nav-link">
+            <img src="/favicon/prev.png" alt="">
+          </a>
+    
+
+   
+    
+
   
   </nav>
-  
+   -->
 
-   
-
-    </div>
-</section>
-   
+  <div class="post-back-btn">
 
 
 
+    
+
+
+  </div>
 
 
     <!-- After footer scripts -->

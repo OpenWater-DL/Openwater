@@ -63,73 +63,105 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+
+  <!-- 所有页面都会基于这个基本layout排列 -->
+
   <body>
-  
 
       <div class="container-fluid  body-container main" id='main'>
         <!-- Header -->
+
         
-  <div class="bg"></div>
-<nav class="navbar" >
-  
-    <a id="site-logo" href="/">
-        <img id="logo-img" src="/favicon/cupLogo.png">
-
-       
-    </a>
-
-    <a id="about-icon" href="/about-me/">
-        <img id="hi" src="/favicon/hi3.png" alt="">
-    </a>
-
-
-    <ul class="nav-list">
-        
-
-                    <li> <a class="nav-text " href="/projects/">Projects</a></li>
-
-                    <li> <a class="nav-text" href="/works/">Works</a></li>
-                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
-
-                                      
-      </ul>
-
-
-
-</nav>
-     
       
-      <!-- <div class="col-12 mb-4">
+      <div class="top-bg"></div>
+
+
+     
+     
+     
+
+
+   
+   
+   
+
+    
+                <div class="lg">
+                    <!-- 大屏菜单 -->
+                    <nav class="navbar">
+                    <ul class="nav-list">
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>
+            
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="sm">
+                    <!-- 小屏菜单 -->
+                    <input type="checkbox" name="" id="sm-menu-input">
+                    <label for="sm-menu-input">   <div id="menu-btn"> 
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+
+                    </div></label>
+                    <div id="nav-bg-sm"></div>
+                    <ul id="nav-list-sm">
+                        <li><a class="nav-text " href="/.">Home</a></li>
+                        <li><a class="nav-text " href="/about-me/">About</a></li>
+                        <li> <a class="nav-text " href="/projects/">Digital Interface</a></li>                
+                        <li> <a class="nav-text" href="/sketches/">Coding Sketches</a></li>
+                        <li> <a class="nav-text" href="/works/">Graphics&Illustrations</a></li>
+                    
+                    </ul>
+
+                </div>
+                
+                
+            
+
+
+
+
+
+<!-- <div class="col-12 mb-4">
   <img class="img-fluid project-img" src="/images/" alt="字迹勘察计划">
 </div> -->
 
+<h1 class="post-title ">
+    字迹勘察计划
+</h1>
+<p class="post-work-type"> Digital Experiment / Interaction</p>
 
 
-<section class="pgbg-black">  
+<div class="portfolio-container">
 
-    <div class="portfolio-container">
-    
-            <div class=" post-info">
-                <h1 class="post-title ">
-                    字迹勘察计划
-                </h1>
-                <date class="post-time ">
+    <div class="left post-info">
+        <div class="post-describe">
+            <p>
+                本科毕设全过程记录。<br/>着眼于人与人之间手写字迹差异，以此生成因人而异的“字迹之花”。最终以现场交互装置的方式呈现。<br/><a href="./#gallery-outputs-1" class="info-a"> >>直接查看最终输出卡片</a>
+            </p>
+
+        </div>
+
+        <!-- <date class="post-time ">
                     <p>
-                        2019-05
+                      Created in  2019
                     </p>
-                </date>
-                <div class="post-describe">
-                    <p>
-                        本科毕设全过程记录。<br/>着眼于人与人之间手写字迹差异，以此生成因人而异的“字迹之花”。最终以现场交互装置的方式呈现。<br/><a href="./#gallery-outputs-1" class="info-a"> >>直接查看最终输出卡片</a>
-        
-                    </p>      
-        
-                </div>
-            </div>       
-           
+                </date> -->
 
-            <div class="post-content">
-                <div style=" background-color:black; ">
+         
+                             
+                     
+                          
+
+
+    </div>
+
+
+    <div class=" right">
+        <div class="post-content">
+            <div style=" background-color:black; ">
 <video width="320" height="240" controls poster="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2019ziji/ziji_fm.png" >
   <source src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2019ziji/2020%E6%AF%95%E8%AE%BE%E5%85%A8%E7%A8%8B%E8%AE%B0%E5%BD%95%E9%87%8D%E7%BD%AE%E7%89%88.mp4"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
@@ -164,40 +196,51 @@
 </div>
 
 
-            </div>
+        </div>
 
-    
-        
+        <div class='post-copyright'>
+            <p> © 2022 开水OPENWATER</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<!-- 
   <nav class="post-nav">
-    <a class='slide-top'>
-      
-      <img src="/favicon/top@2x.png" alt="">
-     </a>
-    
-    
-      <a href="/2019/08/01/2019%E6%A3%80%E5%AF%9F%E6%96%B9%E7%9A%84%E7%BD%AA%E4%BA%BA/" id="post-nav-newer" class="post-nav-link">
-            <img src="/favicon/newer@2x.png" alt="">
-          </a>
-    
+  
     
       <a href="/2019/02/01/2019workIsHard/" id="post-nav-older" class="post-nav-link">
-        <img src="/favicon/older@2x.png" alt="">
+        <img src="/favicon/older.png" alt="">
       </a>
     
 
     
+      <a href="/2019/08/01/2019%E6%A3%80%E5%AF%9F%E6%96%B9%E7%9A%84%E7%BD%AA%E4%BA%BA/" id="post-nav-newer" class="post-nav-link">
+            <img src="/favicon/prev.png" alt="">
+          </a>
+    
+
+   
+    
+
   
   </nav>
-  
+   -->
+
+  <div class="post-back-btn">
+
+
 
    
-
-    </div>
-</section>
-   
-
+    <a  href="/projects/"> 
+      <img src="/favicon/back.png" alt=""></a>
+      
 
 
+  </div>
 
 
     <!-- After footer scripts -->
