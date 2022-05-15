@@ -26,9 +26,9 @@
 
   <!-- Pure CSS -->
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/pure_css/bootstrap.min.css">
-
+ -->
   
 <link rel="stylesheet" href="/css/pure_css/jquery.fancybox.css">
  
@@ -40,15 +40,16 @@
   
 <link rel="stylesheet" href="/css/styles.css">
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/styles_m.css">
- 
+  -->
 
  <script src="/js/lib/jQuery.min.js"></script>
   <!-- Google Analytics -->
-  
+  <!--  -->
 
 
+  <!-- 百度分析 -->
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -58,8 +59,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    
-
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -73,13 +72,13 @@
   <div class="bg"></div>
 <nav class="navbar" >
   
-    <a class="siteLogo" href="/">
+    <a id="site-logo" href="/">
         <img id="logo-img" src="/favicon/cupLogo.png">
 
        
     </a>
 
-    <a class="wave" href="/about-me/">
+    <a id="about-icon" href="/about-me/">
         <img id="hi" src="/favicon/hi3.png" alt="">
     </a>
 
@@ -90,6 +89,7 @@
                     <li> <a class="nav-text " href="/projects/">Projects</a></li>
 
                     <li> <a class="nav-text" href="/works/">Works</a></li>
+                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
 
                                       
       </ul>
@@ -107,19 +107,18 @@
 
 <section class="">  
 
-    <div class="portfolio-full">
+    <div class="portfolio-container">
     
-    <div class="portfolio-full-flex">
-            <div class=" page-info">
-                <h1 class="page-tittle h3">
+            <div class=" post-info">
+                <h1 class="post-title ">
                     天地时纪
                 </h1>
-                <date class="page-time ">
+                <date class="post-time ">
                     <p>
                         2017-04
                     </p>
                 </date>
-                <div class="describe">
+                <div class="post-describe">
                     <p>
                         课题项目,输出的载体是“纪念邮册”。干支符号与悠久的华夏历史世界观的联结，既让我感到有趣，同时又感到十分难以识读。于是抱着“想理解”的心态，用现代的设计语言去尝试梳理了这套体系的“规则”。
         
@@ -129,8 +128,8 @@
             </div>       
            
 
-        <div class="portfolio-content">
-            <div style=" background-color:black; ">
+            <div class="post-content">
+                <div style=" background-color:black; ">
 
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2017-TianDiShiJi/2.jpg"></p>
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2017-TianDiShiJi/1.jpg"></p>
@@ -155,20 +154,10 @@
 
 
 
-        </div>
+            </div>
 
-    </div>
-
-</div>
-</section>
-   
-
-<!-- 
-</section> -->
-
-<!-- 这一页是文章内容页 -->
-
-
+    
+        
   <nav class="post-nav">
     <a class='slide-top'>
       
@@ -191,12 +180,20 @@
   </nav>
   
 
+   
+
+    </div>
+</section>
+   
+
+
+
+
 
     <!-- After footer scripts -->
    
     
-
-
+    
 
 
 

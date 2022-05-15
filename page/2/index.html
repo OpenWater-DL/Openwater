@@ -26,9 +26,9 @@
 
   <!-- Pure CSS -->
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/pure_css/bootstrap.min.css">
-
+ -->
   
 <link rel="stylesheet" href="/css/pure_css/jquery.fancybox.css">
  
@@ -40,15 +40,16 @@
   
 <link rel="stylesheet" href="/css/styles.css">
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/styles_m.css">
- 
+  -->
 
  <script src="/js/lib/jQuery.min.js"></script>
   <!-- Google Analytics -->
-  
+  <!--  -->
 
 
+  <!-- 百度分析 -->
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -58,8 +59,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    
-
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -73,13 +72,13 @@
   <div class="bg"></div>
 <nav class="navbar" >
   
-    <a class="siteLogo" href="/">
+    <a id="site-logo" href="/">
         <img id="logo-img" src="/favicon/cupLogo.png">
 
        
     </a>
 
-    <a class="wave" href="/about-me/">
+    <a id="about-icon" href="/about-me/">
         <img id="hi" src="/favicon/hi3.png" alt="">
     </a>
 
@@ -90,6 +89,7 @@
                     <li> <a class="nav-text " href="/projects/">Projects</a></li>
 
                     <li> <a class="nav-text" href="/works/">Works</a></li>
+                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
 
                                       
       </ul>
@@ -102,7 +102,8 @@
       
   
 
-<div class="container-fluid navbar-container m-sm-5">
+<!-- <div class="container-fluid navbar-container m-sm-5"> -->
+<div class="navbar-container ">
 
 
     
@@ -111,7 +112,8 @@
     <span class="loader"><span class="loader-inner"></span></span>
           </div>
 
-          
+            <!-- p5 sketch -->
+   <div id='sketchbook'></div>
    <!-- <p>JS</p> -->
    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js" integrity="sha512-3CP+e7z5ieYYTIyvRvV3eGVYR67yXg5V2mWfg8pEJJd2mlh8tG/cnDv5scTmRztEYHTksBlpPOmxFOiMtHfZdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
@@ -121,17 +123,55 @@
    <script src="js/boxClass.js"></script>
    <script src="js/openAndInfo.js"></script>   
    <script src="js/procedure.js"></script>
-   <script src="js/sketch.js"></script>
+   <script src="js/sketch.js"></script> 
 
 
-   <footer class="beian"><p>©2021 开水 | <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">桂ICP备2021005928号</a></p></footer>
+   <footer ><p>©2021 开水 | <a class="beian" target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">桂ICP备2021005928号</a></p></footer>
  <section style="display: none;"> 
-
     <div class="row" id="row">
+            
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
+         
+
+   <div class="hovereffect  item">
+    <a class="portfolio-link" href="/2018/09/01/2018观时纪/">
+
+      <img class=" .img-responsive portfolio-img" src="/images/guanshiji.jpg" alt="观时纪" >
+           
+
+      <img class="page-time" src="#" alt="2018-09" style="display: none">     
+    </a>
+  </div>
+
+    
+       
+
+   
 
             
-                
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
+         
+
+   <div class="hovereffect  item">
+    <a class="portfolio-link" href="/2018/07/01/2018Pool/">
+
+      <img class=" .img-responsive portfolio-img" src="/images/2018pool.jpg" alt="Pool" >
+           
+
+      <img class="page-time" src="#" alt="2018-07" style="display: none">     
+    </a>
+  </div>
+
+    
+       
+
    
+
+            
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -150,8 +190,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -170,8 +210,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -190,8 +230,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -210,8 +250,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -230,8 +270,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -250,8 +290,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -270,8 +310,8 @@
    
 
             
-                
-   
+                <!-- 这里是目录页的【单位】。而不是组 -->
+
          
 
    <div class="hovereffect  item">
@@ -289,50 +329,7 @@
 
    
 
-            
-                
-   
-         
-
-   <div class="hovereffect  item">
-    <a class="portfolio-link" href="/2016/06/01/2016姜的事情/">
-
-      <img class=" .img-responsive portfolio-img" src="/images/2016jdsq.jpg" alt="姜的事情" >
-           
-
-      <img class="page-time" src="#" alt="2016-06" style="display: none">     
-    </a>
-  </div>
-
-    
-       
-
-   
-
-            
-                
-   
-         
-
-   <div class="hovereffect  item">
-    <a class="portfolio-link" href="/2016/03/01/2016图形设计/">
-
-      <img class=" .img-responsive portfolio-img" src="/images/2016txsj.jpg" alt="图形练习" >
-           
-
-      <img class="page-time" src="#" alt="2016-03" style="display: none">     
-    </a>
-  </div>
-
-    
-       
-
-   
-
-            
-
-    
-
+               
     </div>
 </section>
    
@@ -350,8 +347,7 @@
     <!-- After footer scripts -->
    
     
-
-
+    
 
 
 

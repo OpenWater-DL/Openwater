@@ -68,7 +68,11 @@ function setup() {
     
 
     canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent("sketchbook");
+    
     cursor('../favicon/circle.png');
+
+
     if(imgP.length==0){
         window.location.reload(); 
     }    //防止返回加载不出来box。
@@ -141,7 +145,8 @@ function draw() {
 
 function windowResized() {
     canvas = createCanvas(windowWidth, windowHeight);
-
+    canvas.parent("sketchbook");
+    
     wavePx.splice(0, wavePx.length);
     let total = 50;
     for (let i = 0; i < total + 1; i++) {

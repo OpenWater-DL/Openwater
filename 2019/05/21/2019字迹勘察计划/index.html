@@ -26,9 +26,9 @@
 
   <!-- Pure CSS -->
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/pure_css/bootstrap.min.css">
-
+ -->
   
 <link rel="stylesheet" href="/css/pure_css/jquery.fancybox.css">
  
@@ -40,15 +40,16 @@
   
 <link rel="stylesheet" href="/css/styles.css">
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/styles_m.css">
- 
+  -->
 
  <script src="/js/lib/jQuery.min.js"></script>
   <!-- Google Analytics -->
-  
+  <!--  -->
 
 
+  <!-- 百度分析 -->
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -58,8 +59,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    
-
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -73,13 +72,13 @@
   <div class="bg"></div>
 <nav class="navbar" >
   
-    <a class="siteLogo" href="/">
+    <a id="site-logo" href="/">
         <img id="logo-img" src="/favicon/cupLogo.png">
 
        
     </a>
 
-    <a class="wave" href="/about-me/">
+    <a id="about-icon" href="/about-me/">
         <img id="hi" src="/favicon/hi3.png" alt="">
     </a>
 
@@ -90,6 +89,7 @@
                     <li> <a class="nav-text " href="/projects/">Projects</a></li>
 
                     <li> <a class="nav-text" href="/works/">Works</a></li>
+                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
 
                                       
       </ul>
@@ -107,19 +107,18 @@
 
 <section class="pgbg-black">  
 
-    <div class="portfolio-full">
+    <div class="portfolio-container">
     
-    <div class="portfolio-full-flex">
-            <div class=" page-info">
-                <h1 class="page-tittle h3">
+            <div class=" post-info">
+                <h1 class="post-title ">
                     字迹勘察计划
                 </h1>
-                <date class="page-time ">
+                <date class="post-time ">
                     <p>
                         2019-05
                     </p>
                 </date>
-                <div class="describe">
+                <div class="post-describe">
                     <p>
                         本科毕设全过程记录。<br/>着眼于人与人之间手写字迹差异，以此生成因人而异的“字迹之花”。最终以现场交互装置的方式呈现。<br/><a href="./#gallery-outputs-1" class="info-a"> >>直接查看最终输出卡片</a>
         
@@ -129,8 +128,8 @@
             </div>       
            
 
-        <div class="portfolio-content">
-            <div style=" background-color:black; ">
+            <div class="post-content">
+                <div style=" background-color:black; ">
 <video width="320" height="240" controls poster="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2019ziji/ziji_fm.png" >
   <source src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2019ziji/2020%E6%AF%95%E8%AE%BE%E5%85%A8%E7%A8%8B%E8%AE%B0%E5%BD%95%E9%87%8D%E7%BD%AE%E7%89%88.mp4"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
@@ -165,20 +164,10 @@
 </div>
 
 
-        </div>
+            </div>
 
-    </div>
-
-</div>
-</section>
-   
-
-<!-- 
-</section> -->
-
-<!-- 这一页是文章内容页 -->
-
-
+    
+        
   <nav class="post-nav">
     <a class='slide-top'>
       
@@ -201,12 +190,20 @@
   </nav>
   
 
+   
+
+    </div>
+</section>
+   
+
+
+
+
 
     <!-- After footer scripts -->
    
     
-
-
+    
 
 
 

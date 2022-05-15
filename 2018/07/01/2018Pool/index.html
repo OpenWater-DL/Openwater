@@ -26,9 +26,9 @@
 
   <!-- Pure CSS -->
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/pure_css/bootstrap.min.css">
-
+ -->
   
 <link rel="stylesheet" href="/css/pure_css/jquery.fancybox.css">
  
@@ -40,15 +40,16 @@
   
 <link rel="stylesheet" href="/css/styles.css">
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/styles_m.css">
- 
+  -->
 
  <script src="/js/lib/jQuery.min.js"></script>
   <!-- Google Analytics -->
-  
+  <!--  -->
 
 
+  <!-- 百度分析 -->
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -58,8 +59,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    
-
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -73,13 +72,13 @@
   <div class="bg"></div>
 <nav class="navbar" >
   
-    <a class="siteLogo" href="/">
+    <a id="site-logo" href="/">
         <img id="logo-img" src="/favicon/cupLogo.png">
 
        
     </a>
 
-    <a class="wave" href="/about-me/">
+    <a id="about-icon" href="/about-me/">
         <img id="hi" src="/favicon/hi3.png" alt="">
     </a>
 
@@ -90,6 +89,7 @@
                     <li> <a class="nav-text " href="/projects/">Projects</a></li>
 
                     <li> <a class="nav-text" href="/works/">Works</a></li>
+                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
 
                                       
       </ul>
@@ -107,19 +107,18 @@
 
 <section class="">  
 
-    <div class="portfolio-full">
+    <div class="portfolio-container">
     
-    <div class="portfolio-full-flex">
-            <div class=" page-info">
-                <h1 class="page-tittle h3">
+            <div class=" post-info">
+                <h1 class="post-title ">
                     Pool
                 </h1>
-                <date class="page-time ">
+                <date class="post-time ">
                     <p>
                         2018-07
                     </p>
                 </date>
-                <div class="describe">
+                <div class="post-describe">
                     <p>
                         暑假，泳池，电脑。
         
@@ -129,28 +128,18 @@
             </div>       
            
 
-        <div class="portfolio-content">
-            <p><a  target="_blank" rel="noopener" href="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/illustration/2018pool/pool.jpg" class="fancybox" data-fancybox="gallery1"><img class="content-a-img" src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/illustration/2018pool/pool.jpg" ></a></p>
+            <div class="post-content">
+                <p><a  target="_blank" rel="noopener" href="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/illustration/2018pool/pool.jpg" class="fancybox" data-fancybox="gallery1"><img class="content-a-img" src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/illustration/2018pool/pool.jpg" ></a></p>
 <div style=" background-color:black; ">
 <video width="320" height="240" controls poster="" >
   <source src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/illustration/2018pool/%E6%B3%B3%E6%B1%A0%E8%BF%87%E7%A8%8B.mp4"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
 </video>
 </div>
-        </div>
+            </div>
 
-    </div>
-
-</div>
-</section>
-   
-
-<!-- 
-</section> -->
-
-<!-- 这一页是文章内容页 -->
-
-
+    
+        
   <nav class="post-nav">
     <a class='slide-top'>
       
@@ -173,12 +162,20 @@
   </nav>
   
 
+   
+
+    </div>
+</section>
+   
+
+
+
+
 
     <!-- After footer scripts -->
    
     
-
-
+    
 
 
 

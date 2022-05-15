@@ -26,9 +26,9 @@
 
   <!-- Pure CSS -->
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/pure_css/bootstrap.min.css">
-
+ -->
   
 <link rel="stylesheet" href="/css/pure_css/jquery.fancybox.css">
  
@@ -40,15 +40,16 @@
   
 <link rel="stylesheet" href="/css/styles.css">
 
-  
+  <!-- 
 <link rel="stylesheet" href="/css/styles_m.css">
- 
+  -->
 
  <script src="/js/lib/jQuery.min.js"></script>
   <!-- Google Analytics -->
-  
+  <!--  -->
 
 
+  <!-- 百度分析 -->
   <script>
     var _hmt = _hmt || [];
     (function() {
@@ -58,8 +59,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    
-
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -73,13 +72,13 @@
   <div class="bg"></div>
 <nav class="navbar" >
   
-    <a class="siteLogo" href="/">
+    <a id="site-logo" href="/">
         <img id="logo-img" src="/favicon/cupLogo.png">
 
        
     </a>
 
-    <a class="wave" href="/about-me/">
+    <a id="about-icon" href="/about-me/">
         <img id="hi" src="/favicon/hi3.png" alt="">
     </a>
 
@@ -90,6 +89,7 @@
                     <li> <a class="nav-text " href="/projects/">Projects</a></li>
 
                     <li> <a class="nav-text" href="/works/">Works</a></li>
+                    <li> <a class="nav-text" href="/sketches/">Sketches</a></li>
 
                                       
       </ul>
@@ -107,19 +107,18 @@
 
 <section class="pgbg-black">  
 
-    <div class="portfolio-full">
+    <div class="portfolio-container">
     
-    <div class="portfolio-full-flex">
-            <div class=" page-info">
-                <h1 class="page-tittle h3">
+            <div class=" post-info">
+                <h1 class="post-title ">
                     观时纪
                 </h1>
-                <date class="page-time ">
+                <date class="post-time ">
                     <p>
                         2018-09
                     </p>
                 </date>
-                <div class="describe">
+                <div class="post-describe">
                     <p>
                         一个基于手机屏幕的实验性作品。将时间流逝映射到手机壁纸上的时间可视化概念主题。<br>获2018年华为“晨星计划-主题设计”- 全场大奖“新锐设计师”奖。
         
@@ -129,8 +128,8 @@
             </div>       
            
 
-        <div class="portfolio-content">
-            <div style=" background-color:black; ">
+            <div class="post-content">
+                <div style=" background-color:black; ">
 <video width="320" height="240" controls poster="" >
   <source  src="https://waterkon.oss-cn-shenzhen.aliyuncs.com/%E4%BD%9C%E5%93%81-%E8%A7%82%E6%97%B6%E7%BA%AA.mp4"   type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
@@ -142,20 +141,10 @@
 <p><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/1.png"><br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/2.jpg"><br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/3.png"><br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/4.jpg"><br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/5.jpg"><br><img src="https://waterpatch.oss-cn-guangzhou.aliyuncs.com/2018guanshiji/6.png"></p>
 <p class="text">注：演示视频里的壁纸作者为Rebecca Mock。展示图片中的壁纸作者为李四饺。此作品概念中的壁纸可自由更换。</p>
 
-        </div>
+            </div>
 
-    </div>
-
-</div>
-</section>
-   
-
-<!-- 
-</section> -->
-
-<!-- 这一页是文章内容页 -->
-
-
+    
+        
   <nav class="post-nav">
     <a class='slide-top'>
       
@@ -178,12 +167,20 @@
   </nav>
   
 
+   
+
+    </div>
+</section>
+   
+
+
+
+
 
     <!-- After footer scripts -->
    
     
-
-
+    
 
 
 
